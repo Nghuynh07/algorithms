@@ -30,7 +30,7 @@ function sameApproachOne(arrayOne, arrayTwo) {
 
 const approachOne = sameApproachOne([1, 2, 3, 4], [1, 16, 9, 4]);
 
-// console.log(approachOne);
+console.log(approachOne);
 
 //approach one time complexity worst case scenario is O(n2) b/c of nested loop
 // for each iteration of arrayOne, it checked with indexOf arrayTwo to find a match
