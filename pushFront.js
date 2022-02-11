@@ -4,9 +4,8 @@ function pushFront(arr, value) {
   arr.push(value);
 
   let temp = arr[arr.length - 1];
-  console.log(temp);
 
-  for (let i = arr.length - 1; i > 0 - 1; i--) {
+  for (let i = arr.length - 1; i > 0; i--) {
     arr[i] = arr[i - 1];
   }
   arr[0] = temp;
