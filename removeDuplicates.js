@@ -1,6 +1,21 @@
 //given a sorted array, remove duplicates values without using built in methods
 
 function removeDuplicates(array) {
+  let i = 0;
+
+  for (let j = 1; j < array.length; j++) {
+    if (array[i] !== array[j]) {
+      i++;
+      array[i] = array[j];
+    }
+  }
+
+  let newIndex = array.length - 1 - i;
+
+  for (let m = newIndex; m < array.length; m++) {
+    array.pop();
+  }
+
   return array;
 }
 
