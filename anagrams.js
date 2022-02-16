@@ -19,6 +19,7 @@ function anagrams(stringOne, stringTwo) {
   }
 
   for (let val in objOne) {
+    console.log(val);
     if (objOne[val] !== objTwo[val]) {
       return false;
     }
@@ -29,8 +30,29 @@ function anagrams(stringOne, stringTwo) {
   return true;
 }
 console.log(anagrams("codingdojo", "codjodoing"));
-console.log(anagrams("codingdojo", "ccodjodoing"));
-console.log(anagrams("birthappydayh", "happybirthday"));
 
-//0123456789
-//
+function anagramTwo(stringOne, stringTwo) {
+  if (stringOne.length !== stringTwo.length) {
+    return false;
+  }
+
+  const letterObject = {};
+
+  for (let i in stringOne) {
+    letterObject[stringOne[i]] = letterObject[stringOne[i]]
+      ? (letterObject[stringOne[i]] += 1)
+      : (letterObject[stringOne[i]] = 1);
+  }
+
+  for (let i in stringTwo) {
+    if (!letterObject[stringTwo[i]]) {
+      return false;
+    } else {
+      letterObject[stringTwo[i]] -= 1;
+    }
+  }
+  return true;
+}
+
+console.log(anagramTwo("anagrams", "smagrana"));
+console.log(anagramTwo("anagrams", "smagranawr"));
