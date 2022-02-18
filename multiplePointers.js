@@ -1,4 +1,4 @@
-//given an array and a target value, return two indexes where value of those indexes = the target number given with the array;
+//given a sorted array and a target value, return two indexes where value of those indexes = the target number given with the array;
 const targetNumber = function (nums, target) {
   let first = 0;
   let last = nums.length - 1;
